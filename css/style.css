@@ -1,0 +1,274 @@
+
+:root {
+    --primary-color: #0A2540;
+    --secondary-color: #42A5F5;
+    --accent-color: #FFC107;
+    --text-color: #333333;
+    --bg-color: #FFFFFF;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header {
+    background-color: #fff;
+    padding: 20px 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li a {
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--secondary-color);
+}
+
+.whatsapp-icon {
+    font-size: 30px;
+    color: #25D366;
+}
+
+.hero {
+    background-image: url('https://images.unsplash.com/photo-1589182373726-e4f658ab50f0');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    position: relative;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(83, 78, 78, 0.6);
+
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-content h1 {
+    font-size: 56px;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.cta-button {
+    background-color: var(--accent-color);
+    background-color: #36C16A;
+    color: var(--primary-color);
+    padding: 15px 30px;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: normal;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #ffca2c;
+}
+
+.about-us, .testimonials {
+    padding: 80px 0;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 60px;
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.about-us h2 {
+    text-align: center;
+}
+
+.about-us-content {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    padding: 0 50px;
+}
+
+.about-us-text {
+    flex: 1;
+}
+
+.about-us-text p {
+    font-family: 'Lato', sans-serif;
+    font-size: 18px; /* Adjusted font size */
+    line-height: 1.8;
+}
+
+.about-us-image {
+    flex: 1;
+    max-width: 400px;
+}
+
+.about-us-image img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.testimonials {
+    background-color: #f9f9f9;
+}
+
+.swiper-container {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.swiper-slide {
+    width: 350px;
+    height: auto;
+}
+
+.swiper-wrapper {
+    align-items: stretch; /* Make slides same height */
+}
+
+.testimonial-card {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    backdrop-filter: blur(10px);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.testimonial-card .stars {
+    color: var(--accent-color);
+    margin-bottom: 20px;
+}
+
+.testimonial-card p {
+    font-style: italic;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.testimonial-card h4 {
+    margin-top: 30px;
+    font-weight: 600;
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 60px 0;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.footer-about, .footer-links, .footer-subscribe {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-about h3, .footer-links h3, .footer-subscribe h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.footer-about p {
+    line-height: 1.7;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin-bottom: 10px;
+}
+
+.footer-links ul li a:hover {
+    color: var(--secondary-color);
+}
+
+.footer-subscribe input {
+    width: 100%;
+    padding: 15px;
+    border-radius: 5px;
+    border: none;
+    margin-bottom: 10px;
+}
+
+.footer-subscribe button {
+    width: 100%;
+    padding: 15px;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.copyright {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #ffffff40;
+}
