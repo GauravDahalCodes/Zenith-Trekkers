@@ -1,45 +1,16 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Smooth scrolling for navigation links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
-            });
-        });
-    });
-
-    // Toggle itinerary plan visibility
-    const toggleButtons = document.querySelectorAll('.toggle-plan');
-    toggleButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            const plan = button.nextElementSibling;
-            if (plan.style.display === 'block') {
-                plan.style.display = 'none';
-                button.textContent = 'View Day-by-Day Plan';
-            } else {
-                plan.style.display = 'block';
-                button.textContent = 'Hide Day-by-Day Plan';
-            }
-        });
-    });
-
     // Testimonials Slider
     var swiper = new Swiper('.swiper-container', {
-        slidesPerView: 3,
+        slidesPerView: 1, // Set default to 1
         spaceBetween: 30,
         loop: true,
+        centeredSlides: true, // Center the slide
         autoplay: {
             delay: 2500,
             disableOnInteraction: false,
         },
         
         breakpoints: {
-            0: {
-                slidesPerView: 1,
-                spaceBetween: 20,
-            },
             768: {
                 slidesPerView: 2,
                 spaceBetween: 30,
@@ -50,14 +21,21 @@ document.addEventListener('DOMContentLoaded', function() {
             },
         }
     });
+});
 
-    // Hamburger menu
-    const hamburger = document.querySelector('.hamburger');
-    const navLinks = document.querySelector('.nav-links');
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
+const hamburgerIcon = hamburger.querySelector('i');
 
-    if (hamburger && navLinks) { // Check if elements exist
-        hamburger.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-        });
+hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+    hamburger.classList.toggle('active');
+
+    if (navLinks.classList.contains('active')) {
+        hamburgerIcon.classList.remove('fa-bars');
+        hamburgerIcon.classList.add('fa-times');
+    } else {
+        hamburgerIcon.classList.remove('fa-times');
+        hamburgerIcon.classList.add('fa-bars');
     }
 });
